@@ -5,6 +5,7 @@ import './App.css';
 import CustomerForm from './CustomerForm/CustomerForm';
 import SalesView from './SalesView/SalesView';
 import NoPage from "./NoPage/NoPage";
+import Login from "./Login/Login";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
             <Router>
               <Routes>
 
-                <Route path="/" element={<CustomerForm/>}/>
+                <Route path="/" element={<Login/>}/>
+                <Route path="/customers/" element={<CustomerForm/>}/>
                 <Route path="/sales/:customerId" element={<SalesView />} />
                 <Route path="*" element={<NoPage />} />
               </Routes>
